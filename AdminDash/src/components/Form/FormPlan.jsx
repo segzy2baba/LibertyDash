@@ -43,10 +43,9 @@ function FormPlan() {
                 value={rangeValue}
                 onChange={handleRangeChange}
               />
-              <div className="tooltip">{rangeValue} months</div>
+              <div className="tooltip1">{rangeValue} months</div>
             </div>
             <hr className="form-hr" />
-            <div> {rangeValue}</div>
             <button className="create-button mb-4">PROCEED</button>
           </form>
         </div>

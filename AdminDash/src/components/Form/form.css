@@ -118,9 +118,14 @@
   cursor: pointer;
 }
 
+.range-container {
+    position: relative;
+}
+
 
 /* Custom styles for the range input */
 .form input[type=range] {
+    position: relative !important;
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
@@ -147,6 +152,7 @@
     background: #592d4d; /* Color for the thumb (ball) */
     border-radius: 50%; /* Rounded shape for the thumb (ball) */
     cursor: pointer;
+    /* position: relative !important; */
   }
   .form input[type=range]::-ms-thumb {
     width: 20px; /* Width of the thumb (ball) */
@@ -157,8 +163,8 @@
   }
   
 
-  /* Custom styles for the tooltip */
-.tooltip {
+/* Custom styles for the tooltip */
+.tooltip1 {
     position: absolute;
     visibility: hidden;
     background-color: #592d4d; /* Tooltip background color */
@@ -169,12 +175,14 @@
     font-size: 12px;
     white-space: nowrap;
     z-index: 1;
+    top: -0px; /* Adjust the tooltip position above the range input */
+    left: 7%;
+    transform: translateX(-50%);
   }
   
   /* Show the tooltip on hover */
-  .form input[type=range]:hover + .tooltip {
-    visibility: visible !important;
+  .form input[type="range"]:hover + .tooltip1 {
+    visibility: visible;
   }
-  
 
 
