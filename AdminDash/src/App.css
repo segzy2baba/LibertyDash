@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #FFFFFF;
+;
   color: #9e9ea4;
   font-family: 'satoshi', sans-serif;
 }
@@ -105,6 +106,7 @@ body {
 .sidebar-list-item {
   /* display: flex; */
   /* justify-content:  */
+  
   padding: 20px 15px ;
   font-size: 15px;
 }
@@ -119,7 +121,7 @@ body {
 
 .sidebar-list-item  a {
   text-decoration: none;
-  color: #9e9ea4;
+  color: #33343D;
 }
 
 
@@ -166,19 +168,25 @@ body {
 .main-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr ;
-  gap: 20px;
+  gap: 15px;
   margin: 15px 0;
 }
 
 .card-content {
   display: flex;
+  cursor: pointer;
   /* flex-direction: column; */
   
 /* 22px, 18px, 22px, 18px */
   justify-content: space-around;
-  padding: 8px 15px;
+  padding: 8px 10px;
   border-radius: 8px;
   background-color: #EFEAED !important;
+}
+
+
+.card-content:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 
