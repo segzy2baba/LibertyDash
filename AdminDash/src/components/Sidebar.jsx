@@ -1,65 +1,86 @@
 // import React from "react";
 import { Link } from "react-router-dom";
+import logoImage from "../assets/log.jpeg";
 import {
   // BsCart3,
   BsGrid1X2Fill,
   BsFillArchiveFill,
-  BsFillGrid3X3GapFill,
+  BsArrowUpSquareFill,
+  BsFillCreditCardFill,
+  BsFillPersonFill,
+  // BsFillGrid3X3GapFill,
   BsPeopleFill,
-  BsListCheck,
-  BsMenuButtonWideFill,
-  BsFillGearFill,
+  // BsListCheck,
+  // BsMenuButtonWideFill,
+  // BsFillGearFill,
+  BsHandbagFill
 } from "react-icons/bs";
+
+// import { FaBagShopping } from "react-icons/fa6";
 
 function Sidebar({ openSidebarToggle, OpenSidebar }) {
   return (
-    <aside
-      id="sidebar"
-      className={openSidebarToggle ? "sidebar-responsive" : ""}
-    >
+    <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive" : ""}>
       <div className="sidebar-title">
-        <div className="sidebar-brand">HARVEST</div>
+        <div className="sidebar-brand">
+          <img src={logoImage} alt="Logo" />
+        </div>
         <span className="icon close_icon" onClick={OpenSidebar}>
           X
         </span>
       </div>
 
       <ul className="sidebar-list">
-        <li className="sidebar-list-item">
-         <Link to="/">
-            <BsGrid1X2Fill className="icon" /> Dashboard
+        <div className="con-sidebar-list-item">
+          <Link to="/">
+            <li className="sidebar-list-item ">
+              <BsGrid1X2Fill className="icon block" /> Dashboard
+            </li>
           </Link>
-        </li>
-        <li className="sidebar-list-item">
-        <Link to="/plan">
-            <BsFillArchiveFill className="icon" /> Products
-            </Link>
-        </li>
-        <li className="sidebar-list-item">
-          <a href="">
-            <BsFillGrid3X3GapFill className="icon" /> Categories
-          </a>
-        </li>
-        <li className="sidebar-list-item">
-          <a href="">
-            <BsPeopleFill className="icon" /> Customers
-          </a>
-        </li>
-        <li className="sidebar-list-item">
-          <a href="">
-            <BsListCheck className="icon" /> Inventory
-          </a>
-        </li>
-        <li className="sidebar-list-item">
-          <a href="">
-            <BsMenuButtonWideFill className="icon" /> Reports
-          </a>
-        </li>
-        <li className="sidebar-list-item">
-          <a href="">
-            <BsFillGearFill className="icon" /> Setting
-          </a>
-        </li>
+        </div>
+        <div className="con-sidebar-list-item">
+          <Link to="/plan">
+            <li className="sidebar-list-item">
+              <BsFillArchiveFill className="icon" /> Plan
+            </li>
+          </Link>
+        </div>
+        <div className="con-sidebar-list-item">
+          <Link to="/purse">
+            <li className="sidebar-list-item">
+              <BsHandbagFill className="icon" /> Purse
+            </li>
+          </Link>
+        </div>
+        <div className="con-sidebar-list-item">
+          <Link to="/investments">
+            <li className="sidebar-list-item">
+              <BsArrowUpSquareFill className="icon" /> Investments
+            </li>
+          </Link>
+        </div>
+        <div className="con-sidebar-list-item">
+          <Link to="/banks-cards">
+            <li className="sidebar-list-item">
+              <BsFillCreditCardFill className="icon" />
+              Banks & Cards
+            </li>
+          </Link>
+        </div>
+        <div className="con-sidebar-list-item">
+          <Link to="/referral">
+            <li className="sidebar-list-item">
+              <BsPeopleFill className="icon" /> Referral Code
+            </li>
+          </Link>
+        </div>
+        <div className="con-sidebar-list-item">
+          <Link to="/account">
+            <li className="sidebar-list-item">
+              <BsFillPersonFill className="icon" /> Account
+            </li>
+          </Link>
+        </div>
       </ul>
     </aside>
   );
