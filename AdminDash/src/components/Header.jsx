@@ -15,7 +15,7 @@ function Header({ OpenSidebar }) {
       </div>
       <div className="header-left">
       <div className="main-title">
-        <h4>PLAN</h4>
+        <h5 className="fs-6">PLAN</h5>
       </div>
       </div>
       <div className="header-right">

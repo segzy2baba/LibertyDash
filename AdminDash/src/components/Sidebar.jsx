@@ -16,7 +16,7 @@ import {
   BsHandbagFill
 } from "react-icons/bs";
 
-// import { FaBagShopping } from "react-icons/fa6";
+import { AiTwotonePieChart } from "react-icons/ai";
 
 function Sidebar({ openSidebarToggle, OpenSidebar }) {
   return (
@@ -78,6 +78,14 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
           <Link to="/account">
             <li className="sidebar-list-item">
               <BsFillPersonFill className="icon" /> Account
+            </li>
+          </Link>
+        </div>
+
+        <div className="con-sidebar-list-item">
+          <Link to="/account">
+            <li className="sidebar-list-item">
+              <AiTwotonePieChart className="icon" /> Portfolio
             </li>
           </Link>
         </div>
