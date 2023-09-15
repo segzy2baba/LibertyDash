@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  BsFillBellFill,
+  BsBell,
   // BsFillEnvelopeFill,
   // BsPersonCircle,
 //   BsSearch,
@@ -19,7 +19,7 @@ function Header({ OpenSidebar }) {
       </div>
       </div>
       <div className="header-right">
-        <BsFillBellFill className="icon" />
+        <BsBell className="icon" />
         {/* <BsFillEnvelopeFill className="icon" />
         <BsPersonCircle className="icon" /> */}
       </div>

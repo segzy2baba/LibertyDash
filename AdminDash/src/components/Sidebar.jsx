@@ -1,4 +1,5 @@
-import React from "react";
+// import React from "react";
+import { Link } from "react-router-dom";
 import {
   // BsCart3,
   BsGrid1X2Fill,
@@ -25,14 +26,14 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
 
       <ul className="sidebar-list">
         <li className="sidebar-list-item">
-          <a href="">
+         <Link to="/">
             <BsGrid1X2Fill className="icon" /> Dashboard
-          </a>
+          </Link>
         </li>
         <li className="sidebar-list-item">
-          <a href="">
+        <Link to="/plan">
             <BsFillArchiveFill className="icon" /> Products
-          </a>
+            </Link>
         </li>
         <li className="sidebar-list-item">
           <a href="">

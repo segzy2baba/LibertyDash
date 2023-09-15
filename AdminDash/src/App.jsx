@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
+import Plan from "./pages/Plan";
 
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
@@ -17,13 +18,17 @@ function App() {
     <>
       <div className="grid-container">
       <Router>
-      <Routes>
+      
         <Header OpenSidebar={OpenSidebar} />
+        
         <Sidebar
           openSidebarToggle={openSidebarToggle}
           OpenSidebar={OpenSidebar}
         />
+        <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/plan" element={<Plan />} />
+        <Route path="*" element={<h1> PAGE NOT FOUND</h1>} />
         {/* <Home /> */}
         </Routes>
         </Router>
