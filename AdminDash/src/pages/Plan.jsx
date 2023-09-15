@@ -1,6 +1,20 @@
 // import React from 'react'
+import { useState } from 'react'
+import Modal from "../components/Model";
 
 function Plan() {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+        setIsModalOpen(true);
+        // console.log("work" , isModalOpen)
+      };
+    
+      const closeModal = () => {
+        setIsModalOpen(false);
+      };
+
   return (
     <>
     <main className="plan-container mt-5 ">
@@ -15,12 +29,15 @@ function Plan() {
           <br />savings plan today!
         </p>
         <div className="text-center">
-          <button className="btn btn-brown px-4">
+          <button className="btn btn-brown px-4"
+             onClick={openModal}
+          >
             START A SAVINGS PLAN
           </button>
         </div>
       </div>
     </section>
+    <Modal isOpen={isModalOpen} onClose={closeModal} />
     </main>
 
     </>

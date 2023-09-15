@@ -7,6 +7,11 @@ body {
 }
 
 
+.brcolor {
+  color: #5b2e4f;
+}
+
+
 
 .icon {
   vertical-align: middle;
@@ -27,6 +32,7 @@ body {
   margin-left: 30px;
   margin-top: 10px;
   cursor: pointer;
+  size: 14PX;
 }
 
 .grid-container {
@@ -142,7 +148,7 @@ body {
 
 .plan-container {
   grid-area: main;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   margin: 0 auto;
   
   /* padding: 20px 20px; */
@@ -229,6 +235,43 @@ body {
 
 .dash-title {
   color: #592d4d;
+}
+
+/* modal  */
+
+/* Modal Container */
+.custom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff !important;
+  border-radius: 1% !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Close Button */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: red;
 }
 
 
