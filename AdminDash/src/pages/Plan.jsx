@@ -1,10 +1,21 @@
-// import React from 'react'
+
 import { useState } from 'react'
 import Modal from "../components/Model";
+import { SlArrowLeft } from "react-icons/sl";
+import { useNavigate } from "react-router-dom";
 
 function Plan() {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
+
+
+    const navigate = useNavigate ();
+
+    const handleCardClick = () => {
+      // Programmatically navigate to the desired route
+      navigate("/");
+      // history.push("/plan");
+    };
 
     const openModal = () => {
         setIsModalOpen(true);
@@ -17,7 +28,11 @@ function Plan() {
 
   return (
     <>
-    <main className="plan-container mt-5 ">
+   
+    <main className="plan-container mt-5">
+    <button type="button" className="btn btn-pink ms-5 mb-4" onClick={handleCardClick}> <SlArrowLeft className="fs-13 me-2" />Back</button>
+
+    <h4 className='fs-5 ms-5'> Personal Savings</h4>
     <section className=" ">
       <div className="p-3">
         <div className="text-center">

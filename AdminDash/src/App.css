@@ -1,7 +1,23 @@
+:root {
+  /* --primary: #4294E3; */
+  --primary: #FFFFFF;
+  /* --secondary: #ce4233; */
+  --secondary: #EFEAED !important;
+ 
+  /* --secondary: #8F12FD; */
+  --red: #ce4233;
+  --grey: #9e9ea4;
+  --brown: #5b2e4f !important;
+  /* --brown: var(--brown); */
+  /* --dark: #262B47; */
+}
+
+
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #FFFFFF;
+  background-color: var(--brown);
 ;
   color: #9e9ea4;
   font-family: 'satoshi', sans-serif;
@@ -9,7 +25,16 @@ body {
 
 
 .brcolor {
-  color: #5b2e4f;
+  color: var(--brown);
+}
+
+.btn-pink {
+  background-color: #F8F1F6 !important; 
+  /* color: #9e9ea4; */
+}
+
+.fs-13 {
+  font-size: 13px;
 }
 
 .w100 {
@@ -157,7 +182,7 @@ body {
 .plan-container {
   grid-area: main;
   /* overflow-y: auto; */
-  margin: 0 auto;
+  /* margin: 0 auto; */
   
   /* padding: 20px 20px; */
   /* color: rgba(255, 255, 255, 0.95); */
@@ -187,7 +212,7 @@ body {
   justify-content: space-around;
   padding: 8px 10px;
   border-radius: 8px;
-  background-color: #EFEAED !important;
+  background-color: var(--secondary) !important;
 }
 
 
@@ -238,13 +263,13 @@ body {
 /* plan  */
 
 .btn-brown{
-  background-color:#5b2e4f !important;
+  background-color: #5b2e4f !important;
   color: #ffffff !important;
   font-size: 12px;
 }
 
 .text-brown{
-  color:#5b2e4f;
+  color:var(--brown);
 }
 
 .dash-title {
