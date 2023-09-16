@@ -8,6 +8,12 @@ function FormPlan() {
     setRangeValue(e.target.value);
   };
 
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleToggle = () => {
+    setIsChecked(!isChecked);
+  };
+
   return (
     <>
       <div className="container border-bottom-0">
@@ -21,7 +27,21 @@ function FormPlan() {
               <label htmlFor="password">Target Amount</label>
               <input type="password" id="password" placeholder="NGN 0" />
             </div>
-            <div className="input-container">
+
+            <div className="toggle d-flex justify-content-start align-items-end mb-5" onClick={handleToggle}>
+              <input
+                className="toggle-checkbox"
+                type="checkbox"
+                checked={isChecked}
+                onChange={() => {}}
+              />
+              <div
+                className={`toggle-switch ${isChecked ? "checked" : ""}`}
+              ></div>
+              <span className="toggle-label">Earn interest on this saving plan</span>
+            </div>
+
+            <div className="input-container mb-5">
               <label htmlFor="email">Saving Frequency</label>
               <select id="email">
                 <option value="option1">Option 1</option>
@@ -29,7 +49,7 @@ function FormPlan() {
                 <option value="option3">Option 3</option>
               </select>
             </div>
-            <div className="input-container range-container">
+            <div className="input-container range-container ">
               <label htmlFor="customRange1" className="form-label">
                 How long do you want to save for?
               </label>
