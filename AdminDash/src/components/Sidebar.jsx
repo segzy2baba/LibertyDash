@@ -8,13 +8,16 @@ import {
   BsArrowUpSquareFill,
   BsFillCreditCardFill,
   BsFillPersonFill,
-  // BsFillGrid3X3GapFill,
+  BsInfoSquareFill,
   BsPeopleFill,
+  BsFillChatDotsFill,
   // BsListCheck,
   // BsMenuButtonWideFill,
   // BsFillGearFill,
   BsHandbagFill
 } from "react-icons/bs";
+// import {BiSolidLogOut } from "react-icons/bs";
+import { IoLogOut } from "react-icons/io5";
 
 import { AiTwotonePieChart } from "react-icons/ai";
 
@@ -89,6 +92,33 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
             </li>
           </Link>
         </div>
+
+        <div className="con-sidebar-list-item">
+          <Link to="/account">
+            <li className="sidebar-list-item">
+              <BsInfoSquareFill className="icon" /> About Harvest
+            </li>
+          </Link>
+        </div>
+
+        <div className="con-sidebar-list-item">
+          <Link to="/account">
+            <li className="sidebar-list-item">
+              <BsFillChatDotsFill className="icon" /> Support
+            </li>
+          </Link>
+        </div>
+
+
+        <div className="con-sidebar-list-item">
+          <Link to="/account">
+            <li className="sidebar-list-item">
+              <IoLogOut className="icon" /> Logout
+            </li>
+          </Link>
+        </div>
+
+        
       </ul>
     </aside>
   );
