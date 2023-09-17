@@ -27,7 +27,7 @@ function App() {
         />
         <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/plan" element={<Plan />} />
+        <Route path="plan/personal" element={<Plan />} />
         <Route path="*" element={<h1> PAGE NOT FOUND</h1>} />
         {/* <Home /> */}
         </Routes>

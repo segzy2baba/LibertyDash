@@ -17,7 +17,7 @@ function Home() {
 
   const handleCardClick = () => {
     // Programmatically navigate to the desired route
-    navigate("/plan");
+    navigate("/plan/personal");
     // history.push("/plan");
   };
 
