@@ -12,6 +12,13 @@
   /* --dark: #262B47; */
 }
 
+.active {
+  color: var(--brown); 
+  background-color: #F8F1F6;
+  border-radius: 10%;
+ width: 95%;
+}
+
 
 
 body {

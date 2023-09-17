@@ -42,8 +42,8 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
           </Link>
         </div>
         <div className="con-sidebar-list-item">
-          <Link to="/plan">
-            <li className="sidebar-list-item">
+          <Link to="/">
+            <li className="sidebar-list-item active">
               <BsFillArchiveFill className="icon" /> Plan
             </li>
           </Link>
