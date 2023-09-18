@@ -1,11 +1,10 @@
 // import React from "react";
 import {
   BsBell,
-  // BsFillEnvelopeFill,
-  // BsPersonCircle,
-//   BsSearch,
   BsJustify,
 } from "react-icons/bs";
+import PropTypes from "prop-types";
+
 
 function Header({ OpenSidebar }) {
   return (
@@ -20,11 +19,13 @@ function Header({ OpenSidebar }) {
       </div>
       <div className="header-right">
         <BsBell className="icon" />
-        {/* <BsFillEnvelopeFill className="icon" />
-        <BsPersonCircle className="icon" /> */}
       </div>
     </header>
   );
 }
+
+Header.propTypes = {
+  OpenSidebar: PropTypes.func.isRequired,
+};
 
 export default Header;
