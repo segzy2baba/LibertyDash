@@ -1,6 +1,7 @@
 import "./form.css";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import PropTypes from 'prop-types';
 
 function FormPlan({ onClose }) {
   const [rangeValue, setRangeValue] = useState(0);
@@ -130,5 +131,9 @@ function FormPlan({ onClose }) {
     </>
   );
 }
+
+FormPlan.propTypes = {
+  onClose: PropTypes.func.isRequired,
+};
 
 export default FormPlan;

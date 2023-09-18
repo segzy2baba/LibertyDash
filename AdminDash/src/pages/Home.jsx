@@ -1,15 +1,12 @@
 // import React from "react";
 import { useNavigate } from "react-router-dom";
 import {
-  // BsFillArchiveFill
   BsPeopleFill,
-  // BsFillBellFill,
   BsChevronRight,
 } from "react-icons/bs";
 import { FaPiggyBank } from "react-icons/fa";
-
 import { FcMoneyTransfer, FcUnlock } from "react-icons/fc";
-// import { Link } from "react-router-dom";
+
 
 function Home() {
 
@@ -18,7 +15,7 @@ function Home() {
   const handleCardClick = () => {
     // Programmatically navigate to the desired route
     navigate("/plan/personal");
-    // history.push("/plan");
+  
   };
 
   return (
@@ -29,7 +26,6 @@ function Home() {
 
       <div className="main-cards">
         <div className="card-content py-4" onClick={handleCardClick}>
-          {/* <Link to="/plan"> */}
           <div className="bg-white card_icon">
             <FaPiggyBank className="fs-2 pink-icon" />
           </div>
@@ -40,7 +36,6 @@ function Home() {
             </p>
           </div>
           <BsChevronRight className="fs-4" />
-          {/* </Link> */}
         </div>
 
         <div className="card-content py-4">

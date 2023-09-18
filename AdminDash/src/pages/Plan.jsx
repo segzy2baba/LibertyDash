@@ -12,14 +12,11 @@ function Plan() {
     const navigate = useNavigate ();
 
     const handleCardClick = () => {
-      // Programmatically navigate to the desired route
       navigate("/");
-      // history.push("/plan");
     };
 
     const openModal = () => {
         setIsModalOpen(true);
-        // console.log("work" , isModalOpen)
       };
     
       const closeModal = () => {

@@ -2,7 +2,6 @@
 import { Link } from "react-router-dom";
 import logoImage from "../assets/log.jpeg";
 import {
-  // BsCart3,
   BsGrid1X2Fill,
   BsFillArchiveFill,
   BsArrowUpSquareFill,
@@ -11,19 +10,18 @@ import {
   BsInfoSquareFill,
   BsPeopleFill,
   BsFillChatDotsFill,
-  // BsListCheck,
-  // BsMenuButtonWideFill,
-  // BsFillGearFill,
-  BsHandbagFill
+  BsHandbagFill,
 } from "react-icons/bs";
-// import {BiSolidLogOut } from "react-icons/bs";
 import { IoLogOut } from "react-icons/io5";
-
+import PropTypes from "prop-types";
 import { AiTwotonePieChart } from "react-icons/ai";
 
 function Sidebar({ openSidebarToggle, OpenSidebar }) {
   return (
-    <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive" : ""}>
+    <aside
+      id="sidebar"
+      className={openSidebarToggle ? "sidebar-responsive" : ""}
+    >
       <div className="sidebar-title">
         <div className="sidebar-brand">
           <img src={logoImage} alt="Logo" />
@@ -109,7 +107,6 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
           </Link>
         </div>
 
-
         <div className="con-sidebar-list-item">
           <Link to="/account">
             <li className="sidebar-list-item">
@@ -117,11 +114,14 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
             </li>
           </Link>
         </div>
-
-        
       </ul>
     </aside>
   );
 }
+
+Sidebar.propTypes = {
+  openSidebarToggle: PropTypes.bool.isRequired,
+  OpenSidebar: PropTypes.func.isRequired,
+};
 
 export default Sidebar;

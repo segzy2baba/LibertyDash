@@ -1,6 +1,7 @@
 // import { useState } from 'react';
 
 import FormPlan from "./Form/FormPlan";
+import PropTypes from "prop-types";
 
 function Model({ isOpen, onClose }) {
 
@@ -8,19 +9,22 @@ function Model({ isOpen, onClose }) {
 
     
   return (
-    <div className="custom-modal"> {/* Change the class name here */}
-      <div className="modal-content text-center"> {/* Center content using text-center */}
+    <div className="custom-modal"> 
+      <div className="modal-content text-center"> 
         <span className="modal-close" onClick={onClose}>
           &times;
         </span>
         <h5 className="brcolor">Create a Personal Savings Plan</h5>
         <p className="fw-light">Start a savings plan to smash your goals</p>
-
-        {/* Include the FormComponent */}
         <FormPlan onClose={onClose} />
       </div>
     </div>
   )
 }
+
+Model.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+};
 
 export default Model
